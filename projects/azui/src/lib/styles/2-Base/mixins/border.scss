@@ -1,0 +1,22 @@
+// BORDERS
+@mixin border-classes($sizes) {
+  @each $size in $sizes {
+    .br-#{$size} {
+      border-radius: #{$size}px;
+    }
+    .br-tl-#{$size} {
+      border-top-left-radius: #{$size}px;
+    }
+    .br-tr-#{$size} {
+      border-top-right-radius: #{$size}px;
+    }
+    .br-bl-#{$size} {
+      border-bottom-left-radius: #{$size}px;
+    }
+    .br-br-#{$size} {
+      border-bottom-right-radius: #{$size}px;
+    }
+  }
+}
+
+@include border-classes($sizes);

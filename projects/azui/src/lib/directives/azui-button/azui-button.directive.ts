@@ -101,10 +101,7 @@ export class AzuiButton implements OnInit, OnChanges {
     }
 
     if (this.disabled) {
-      this.elementRef.nativeElement.classList.toggle(`az-button__disabled`);
-      this.elementRef.nativeElement.classList.toggle(
-        `az-button-${this.tipo}__disabled`
-      );
+      this.elementRef.nativeElement.classList.toggle(`az-button--disabled`);
     }
   }
 

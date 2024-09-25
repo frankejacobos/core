@@ -1,0 +1,28 @@
+// COLORS
+@mixin color-classes($colors) {
+  @each $color, $code in $colors {
+    .background-#{$color} {
+      background-color: $code;
+    }
+    .text-#{$color} {
+      color: $code;
+    }
+    .border-#{$color} {
+      border: 1px solid $code;
+    }
+    .border-right-#{$color} {
+      border-right: 1px solid $code;
+    }
+    .border-left-#{$color} {
+      border-left: 1px solid $code;
+    }
+    .border-top-#{$color} {
+      border-top: 1px solid $code;
+    }
+    .border-bottom-#{$color} {
+      border-bottom: 1px solid $code;
+    }
+  }
+}
+
+@include color-classes($colors);

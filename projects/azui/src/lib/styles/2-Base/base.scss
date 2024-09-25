@@ -1,0 +1,222 @@
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.item-self-start {
+  align-self: flex-start;
+}
+
+.item-self-stretch {
+  align-self: stretch;
+}
+
+.item-self-center {
+  align-self: center;
+}
+
+.item-self-end {
+  align-self: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.expanded {
+  flex: 1 1;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.w100-screen {
+  width: 100vw;
+}
+
+.h100-screen {
+  height: 100vh;
+}
+
+.min-h100-screen {
+  min-height: 100vh;
+}
+
+.min-w0 {
+  min-width: 0;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-ellipsis-2-lines {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.text-ellipsis-3-lines {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-semi-bold {
+  font-weight: 600;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-input-label {
+  font-size: 10px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+}
+
+.text-description {
+  font-size: 12px;
+  line-height: 140%;
+  font-weight: 400;
+}
+
+table {
+  border-spacing: 0;
+}
+
+th {
+  font-weight: 400;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 61px;
+  line-height: 140%;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 47px;
+  line-height: 140%;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 140%;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 27px;
+  line-height: 140%;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 21px;
+  line-height: 140%;
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.br-50 {
+  border-radius: 50%;
+}
+
+.o-hidden {
+  overflow: hidden;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}

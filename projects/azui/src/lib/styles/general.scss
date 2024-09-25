@@ -1,0 +1,17 @@
+// BASE
+@import "./2-Base/base.scss";
+@import "./2-Base/resets/reset-ng-zorro.scss";
+
+// CONFIG
+@import "./1-Tokens/variables.scss";
+@import "/src/config.scss";
+
+// SET UP
+@import "./2-Base/mixins/border.scss";
+@import "./2-Base/mixins/color.scss";
+@import "./2-Base/mixins/gap.scss";
+@import "./2-Base/mixins/margin.scss";
+@import "./2-Base/mixins/padding.scss";
+@import "./2-Base/mixins/shadow.scss";
+
+@import "./3-Atoms/butons.scss";
