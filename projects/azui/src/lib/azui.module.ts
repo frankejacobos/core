@@ -4,6 +4,6 @@ import { CardComponent } from './components/card/card.component';
 @NgModule({
   declarations: [CardComponent],
   imports: [],
-  exports: [CardComponent, AzuiModule],
+  exports: [CardComponent],
 })
 export class AzuiModule {}
