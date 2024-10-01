@@ -1,0 +1,30 @@
+// PADDINGS
+@mixin padding-classes($sizes) {
+  @each $size in $sizes {
+    .p-#{$size} {
+      padding: #{$size}px;
+    }
+    .pt-#{$size} {
+      padding-top: #{$size}px;
+    }
+    .pb-#{$size} {
+      padding-bottom: #{$size}px;
+    }
+    .pl-#{$size} {
+      padding-left: #{$size}px;
+    }
+    .pr-#{$size} {
+      padding-right: #{$size}px;
+    }
+    .px-#{$size} {
+      padding-left: #{$size}px;
+      padding-right: #{$size}px;
+    }
+    .py-#{$size} {
+      padding-top: #{$size}px;
+      padding-bottom: #{$size}px;
+    }
+  }
+}
+
+@include padding-classes($sizes);

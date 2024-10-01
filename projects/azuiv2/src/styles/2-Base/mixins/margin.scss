@@ -1,0 +1,30 @@
+// MARGINS
+@mixin margin-classes($sizes) {
+  @each $size in $sizes {
+    .m-#{$size} {
+      margin: #{$size}px;
+    }
+    .mt-#{$size} {
+      margin-top: #{$size}px;
+    }
+    .mb-#{$size} {
+      margin-bottom: #{$size}px;
+    }
+    .ml-#{$size} {
+      margin-left: #{$size}px;
+    }
+    .mr-#{$size} {
+      margin-right: #{$size}px;
+    }
+    .mx-#{$size} {
+      margin-left: #{$size}px;
+      margin-right: #{$size}px;
+    }
+    .my-#{$size} {
+      margin-top: #{$size}px;
+      margin-bottom: #{$size}px;
+    }
+  }
+}
+
+@include margin-classes($sizes);

@@ -8,6 +8,9 @@
       "azui": [
         "dist/azui"
       ],
+      "azuiv2": [
+        "dist/azuiv2"
+      ],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

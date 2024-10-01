@@ -5,5 +5,35 @@
     "entryFile": "src/public-api.ts",
     "styleIncludePaths": ["src/lib/styles"]
   },
-  "assets": ["./src/lib/styles/1-Tokens/tokens-spacing.scss"]
+  "allowedNonPeerDependencies": ["ng-zorro-antd"],
+  "assets": [
+    "./src/lib/styles/1-Tokens/variables.scss",
+
+    "./src/lib/styles/2-Base/mixins/border.scss",
+    "./src/lib/styles/2-Base/mixins/color.scss",
+    "./src/lib/styles/2-Base/mixins/gap.scss",
+    "./src/lib/styles/2-Base/mixins/margin.scss",
+    "./src/lib/styles/2-Base/mixins/padding.scss",
+    "./src/lib/styles/2-Base/mixins/shadow.scss",
+    "./src/lib/styles/2-Base/resets/reset-ng-zorro.scss",
+    "./src/lib/styles/2-Base/base.scss",
+
+    "./src/lib/styles/3-Atoms/buttons.scss",
+    "./src/lib/styles/3-Atoms/checkbox.scss",
+    "./src/lib/styles/3-Atoms/error.scss",
+    "./src/lib/styles/3-Atoms/file-upload.scss",
+    "./src/lib/styles/3-Atoms/input-number.scss",
+    "./src/lib/styles/3-Atoms/input.scss",
+    "./src/lib/styles/3-Atoms/modal-message.scss",
+    "./src/lib/styles/3-Atoms/pagination.scss",
+    "./src/lib/styles/3-Atoms/radio-button.scss",
+    "./src/lib/styles/3-Atoms/radio.scss",
+    "./src/lib/styles/3-Atoms/select.scss",
+    "./src/lib/styles/3-Atoms/table.scss",
+    "./src/lib/styles/3-Atoms/textarea.scss",
+    "./src/lib/styles/3-Atoms/toggle.scss",
+    "./src/lib/styles/3-Atoms/tooltip.scss",
+
+    "./src/lib/styles/general.scss"
+  ]
 }

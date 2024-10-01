@@ -1,0 +1,16 @@
+// GAPS
+@mixin gap-classes($sizes) {
+  @each $size in $sizes {
+    .gap-#{$size} {
+      gap: #{$size}px;
+    }
+    .row-gap-#{$size} {
+      row-gap: #{$size}px;
+    }
+    .col-gap-#{$size} {
+      column-gap: #{$size}px;
+    }
+  }
+}
+
+@include gap-classes($sizes);

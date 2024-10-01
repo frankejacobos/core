@@ -1,0 +1,148 @@
+<div
+  class="flex-column"
+  [ngStyle]="{
+    width,
+}"
+>
+  <!-- INPUTS -->
+  <div class="flex gap-16 items-center">
+    <!-- FECHA IZQUIERDA -->
+    <azui-input-group
+      [prefixRef]="preffix"
+      label="Desde"
+      class="expanded"
+      (click)="abrirCalendario(true)"
+      [isDisabled]="isDisabled"
+      style="cursor: pointer"
+    >
+      <input
+        type="text"
+        [value]="fechaIzquierda | date : 'dd MMM yyyy' | uppercase"
+        azui-input
+        readonly
+      />
+    </azui-input-group>
+    <p>—</p>
+    <!-- FECHA DERECHA -->
+    <azui-input-group
+      [prefixRef]="preffix"
+      label="Hasta"
+      class="expanded"
+      (click)="abrirCalendario(false)"
+      style="cursor: pointer"
+      [isDisabled]="isDisabled"
+    >
+      <input
+        type="text"
+        azui-input
+        [value]="fechaDerecha | date : 'dd MMM yyyy' | uppercase"
+        readonly
+      />
+    </azui-input-group>
+  </div>
+
+  <nz-collapse nzGhost>
+    <nz-collapse-panel
+      [ngClass]="{
+        'filtros-cerrado': !seMuestraElCalendario,
+        'filtros-abierto': seMuestraElCalendario
+      }"
+      [nzHeader]="undefined"
+      [(nzActive)]="seMuestraElCalendario"
+      [nzShowArrow]="false"
+    >
+      <div class="flex gap-40">
+        <!-- CALENDARIO IZQUIERDO -->
+        <div class="flex-column gap-8 expanded">
+          <!-- FLECHA Y FECHA -->
+
+          <div class="flex gap-8 items-center">
+            <button
+              azui-button
+              tipo="link"
+              type="button"
+              (click)="actualizarCalendarios(-1)"
+            >
+              <span
+                azui-icons
+                name="izquierda"
+                class="text-primary-5"
+                style="font-size: 14px; height: 1em"
+              ></span>
+            </button>
+            <div class="flex expanded gap-8 justify-center">
+              <button azui-button tipo="link" type="button">
+                {{ calendarioIzquierda | date : 'MMMM' | titlecase }}
+              </button>
+              <button azui-button tipo="link" type="button">
+                {{ calendarioIzquierda | date : 'yyyy' }}
+              </button>
+            </div>
+          </div>
+          <azui-divider></azui-divider>
+
+          <azui-calendar
+            #azCalendarIzquierdo
+            [fechaMinima]="fechaMinima"
+            [fechaMaxima]="fechaMaxima"
+            [fechaBase]="calendarioIzquierda"
+            [tieneFoco]="izquierdaSeleccionada"
+            [fechaHermana]="fechaDerecha"
+            (fechaChange)="setFechaIzquierda($event)"
+            (seleccionFecha)="
+              azCalendarDerecho.seleccionarFecha($event.fecha, $event.directly)
+            "
+          ></azui-calendar>
+        </div>
+        <!-- CALENDARIO DERECHO -->
+        <div class="flex-column gap-8 expanded">
+          <!-- FLECHA Y FECHA -->
+          <div class="flex gap-8 items-center">
+            <div class="flex expanded gap-8 justify-center">
+              <button azui-button tipo="link" type="button">
+                {{ calendarioDerecha | date : 'MMMM' | titlecase }}
+              </button>
+              <button azui-button tipo="link" type="button">
+                {{ calendarioDerecha | date : 'yyyy' }}
+              </button>
+            </div>
+            <button
+              azui-button
+              tipo="link"
+              type="button"
+              (click)="actualizarCalendarios(1)"
+            >
+              <span
+                azui-icons
+                name="derecha"
+                class="text-primary-5"
+                style="font-size: 14px; height: 1em"
+              ></span>
+            </button>
+          </div>
+          <azui-divider></azui-divider>
+          <azui-calendar
+            #azCalendarDerecho
+            [fechaMinima]="fechaMinima"
+            [fechaMaxima]="fechaMaxima"
+            [fechaBase]="calendarioDerecha"
+            [esDerecho]="true"
+            [tieneFoco]="!izquierdaSeleccionada"
+            [fechaHermana]="fechaIzquierda"
+            (fechaChange)="setFechaDerecha($event)"
+            (seleccionFecha)="
+              azCalendarIzquierdo.seleccionarFecha(
+                $event.fecha,
+                $event.directly
+              )
+            "
+          ></azui-calendar>
+        </div>
+      </div>
+    </nz-collapse-panel>
+  </nz-collapse>
+</div>
+
+<ng-template #preffix>
+  <span azui-icons name="calendario"></span>
+</ng-template>

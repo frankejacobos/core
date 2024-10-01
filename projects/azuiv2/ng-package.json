@@ -1,0 +1,38 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/azuiv2",
+  "lib": {
+    "entryFile": "src/public-api.ts",
+    "styleIncludePaths": ["src/styles"]
+  },
+  "assets": [
+    "./src/styles/1-Tokens/variables.scss",
+
+    "./src/styles/2-Base/mixins/border.scss",
+    "./src/styles/2-Base/mixins/color.scss",
+    "./src/styles/2-Base/mixins/gap.scss",
+    "./src/styles/2-Base/mixins/margin.scss",
+    "./src/styles/2-Base/mixins/padding.scss",
+    "./src/styles/2-Base/mixins/shadow.scss",
+    "./src/styles/2-Base/resets/reset-ng-zorro.scss",
+    "./src/styles/2-Base/base.scss",
+
+    "./src/styles/3-Atoms/buttons.scss",
+    "./src/styles/3-Atoms/checkbox.scss",
+    "./src/styles/3-Atoms/error.scss",
+    "./src/styles/3-Atoms/file-upload.scss",
+    "./src/styles/3-Atoms/input-number.scss",
+    "./src/styles/3-Atoms/input.scss",
+    "./src/styles/3-Atoms/modal-message.scss",
+    "./src/styles/3-Atoms/pagination.scss",
+    "./src/styles/3-Atoms/radio-button.scss",
+    "./src/styles/3-Atoms/radio.scss",
+    "./src/styles/3-Atoms/select.scss",
+    "./src/styles/3-Atoms/table.scss",
+    "./src/styles/3-Atoms/textarea.scss",
+    "./src/styles/3-Atoms/toggle.scss",
+    "./src/styles/3-Atoms/tooltip.scss",
+
+    "./src/styles/general.scss"
+  ]
+}

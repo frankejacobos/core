@@ -24,7 +24,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "dist/azuiv2/src/styles/general.scss",
+              "src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -110,6 +113,36 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/azui/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
+    },
+    "azuiv2": {
+      "projectType": "library",
+      "root": "projects/azuiv2",
+      "sourceRoot": "projects/azuiv2/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/azuiv2/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/azuiv2/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/azuiv2/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/azuiv2/tsconfig.spec.json",
             "polyfills": ["zone.js", "zone.js/testing"]
           }
         }

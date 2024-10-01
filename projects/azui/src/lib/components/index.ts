@@ -1,0 +1,38 @@
+export * from './azui-input/azui-input.directive';
+
+export * from './azui-alert/azui-alert.component';
+export * from './azui-checkbox/azui-checkbox.component';
+// export * from './azui-copy/azui-copy.component';
+export * from './azui-divider/azui-divider.component';
+export * from './azui-error/azui-error.component';
+export * from './azui-file-upload/azui-file-upload.component';
+export * from './azui-input-number/azui-input-number.component';
+export * from './azui-input/azui-input-group/azui-input-group.component';
+export * from './azui-message/azui-message.component';
+// export * from './azui-modal-confirmacion/azui-modal-confirmacion.component';
+// export * from './azui-modal-message/azui-modal-message.component';
+// export * from './azui-modal/azui-modal.component';
+export * from './azui-pagination/azui-pagination.component';
+export * from './azui-radio-button/azui-radio-button.component';
+export * from './azui-radio-group/azui-radio-group.component';
+export * from './azui-range-picker/azui-range-picker.component';
+export * from './azui-select/azui-option/azui-option.component';
+export * from './azui-select/azui-select.component';
+export * from './azui-table/azui-table-body/azui-table-body.component';
+export * from './azui-table/azui-table-head/azui-table-head.component';
+export * from './azui-table/azui-table-row/azui-table-row.component';
+export * from './azui-table/azui-table-skeleton/azui-table-skeleton.component';
+export * from './azui-table/azui-table.component';
+export * from './azui-tag/azui-tag.component';
+export * from './azui-textarea/azui-textarea.component';
+export * from './azui-toggle/azui-toggle.component';
+export * from './azui-tree/azui-tree.component';
+// export * from './azui-vacio/azui-vacio.component';
+
+export * from './azui-alert/azui-alert.module';
+// export * from './azui-file-upload/azui-file-upload.module';
+export * from './azui-input/azui-input.module';
+// export * from './azui-range-picker/azui-range-picker.module';
+export * from './azui-select/azui-select.module';
+export * from './azui-table/azui-table.module';
+// export * from './azui-tree/azui-tree.module';

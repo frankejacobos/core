@@ -1,0 +1,11 @@
+// SHADOWS
+@mixin shadow($name, $color, $blur: 4px) {
+  .shadow-#{$name} {
+    box-shadow: 0 0 $blur $color;
+  }
+}
+
+@include shadow("primary", rgba(map-get($colors, "primary-5"), 0.12));
+@include shadow("neutral", rgba(map-get($colors, "base"), 0.12));
+@include shadow("warning", rgba(map-get($colors, "warning-hard"), 0.12));
+@include shadow("overlay", rgba(map-get($colors, "primary-7"), 0.12), 24px);

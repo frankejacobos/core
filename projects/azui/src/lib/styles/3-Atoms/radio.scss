@@ -1,0 +1,70 @@
+// @use '../1-Tokens/tokens-colors.scss' as tColors;
+
+.az-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+
+.az-radio__disabled {
+  pointer-events: none;
+}
+
+.az-radio:hover > .label-container > .text {
+  color: map-get($colors, primary-5);
+}
+
+.az-radio:hover > input[type="radio"] {
+  border-color: map-get($colors, primary-5);
+}
+
+.az-radio > input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid map-get($colors, disabled);
+  background: map-get($colors, inverse);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+
+  &:not(:disabled):checked {
+    background-color: map-get($colors, primary-5);
+    border-color: map-get($colors, primary-5);
+  }
+
+  &:not(:disabled):checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: map-get($colors, primary-5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 2px map-get($colors, inverse);
+  }
+
+  &:checked:disabled {
+    background: map-get($colors, disabled);
+  }
+}
+
+.az-radio > .label-container {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.az-radio > .label-container > .text {
+  font-size: 16px;
+  /* color: map-get($colors,base); */
+}
+
+.az-radio > .label-container > .description {
+  font-size: 12px;
+  /* color: map-get($colors,subordinate); */
+}

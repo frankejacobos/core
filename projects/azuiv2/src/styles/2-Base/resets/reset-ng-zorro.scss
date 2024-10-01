@@ -1,0 +1,137 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left {
+  border-right: none;
+}
+
+.ant-menu,
+.ant-menu-sub.ant-menu-inline {
+  background-color: transparent;
+}
+
+.ant-menu-inline .ant-menu-item {
+  border-radius: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.ant-menu-inline.ant-menu-root .ant-menu-item {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #5568b7;
+  border-radius: 8px;
+}
+
+.ant-menu-inline .ant-menu-item::after {
+  border-right: none;
+}
+
+.ant-menu-item a {
+  color: #8f93a1;
+}
+
+.ant-menu-item {
+  white-space: normal;
+}
+
+.ant-menu-item-selected a,
+.ant-menu-item-selected a:hover {
+  color: #fbfbff;
+}
+
+.ant-skeleton-element {
+  width: 100%;
+}
+
+.ant-skeleton-element .ant-skeleton-input {
+  min-width: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.ant-message-notice-content {
+  border-radius: 8px;
+}
+
+.ant-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-top: 4px solid #738cf2;
+  box-shadow: 0 0 24px rgba(42, 52, 91, 0.12);
+  padding: 24px 24px 16px 24px;
+  max-height: 100%;
+}
+
+.ant-modal-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.ant-modal-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.ant-modal-footer {
+  padding-top: 16px;
+  border-top: 1px solid #f0f2f9;
+}
+
+.ant-upload.ant-upload-drag .ant-upload {
+  padding: 0;
+}
+
+.ant-popover-inner {
+  max-height: 256px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 0 24px rgba(42, 52, 91, 0.12);
+}
+
+.ant-popover-inner-content {
+  padding: 0;
+}
+
+.ant-popover-arrow {
+  width: 0;
+  height: 0;
+}
+
+.ant-collapse-ghost > .ant-collapse-item > .ant-collapse-content {
+  border-top: none;
+  margin-top: 0;
+}
+
+.ant-collapse
+  > .ant-collapse-item.ant-collapse-no-arrow
+  > .ant-collapse-header {
+  padding: 0;
+  border-bottom: 0;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  padding: 0;
+}
+
+.ant-collapse-content > .ant-collapse-content-box {
+  padding-top: 0 !important;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0 !important;
+}
