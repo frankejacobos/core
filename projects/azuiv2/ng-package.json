@@ -5,6 +5,7 @@
     "entryFile": "src/public-api.ts",
     "styleIncludePaths": ["src/styles"]
   },
+  "allowedNonPeerDependencies": ["ng-zorro-antd"],
   "assets": [
     "./src/styles/1-Tokens/variables.scss",
 

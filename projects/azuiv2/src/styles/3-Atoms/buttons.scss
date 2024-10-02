@@ -129,11 +129,11 @@
 
 @include azui-button(
   "neutral",
-  transparent,
-  map-get($colors, subordinate),
-  transparent,
-  transparent,
+  map-get($colors, inverse),
   map-get($colors, base),
+  transparent,
+  map-get($colors, inverse),
+  map-get($colors, subordinate),
   transparent,
   map-get($colors, subordinate),
   map-get($colors, inverse),
@@ -151,15 +151,15 @@
   transparent,
   map-get($colors, primary-4),
   map-get($colors, primary-2),
-  map-get($colors, inverse),
-  map-get($colors, primary-6),
-  map-get($colors, primary-4),
-  map-get($colors, inverse),
+  transparent,
+  map-get($colors, primary-5),
+  map-get($colors, primary-5),
+  transparent,
   map-get($colors, primary-2),
   map-get($colors, primary-2),
   map-get($colors, inverse),
   map-get($colors, danger-hard),
-  map-get($colors, danger-mediu) m
+  map-get($colors, danger-medium)
 );
 
 @include azui-button(
@@ -170,8 +170,8 @@
   map-get($colors, inverse),
   map-get($colors, primary-4),
   transparent,
-  map-get($colors, primary-1),
-  map-get($colors, base),
+  map-get($colors, inverse),
+  map-get($colors, primary-6),
   transparent,
   map-get($colors, inverse),
   map-get($colors, disabled),
@@ -189,7 +189,7 @@
   transparent,
   map-get($colors, primary-6),
   transparent,
-  map-get($colors, inverse),
+  transparent,
   map-get($colors, primary-2),
   transparent
 );
@@ -197,15 +197,15 @@
 @include azui-button(
   "text",
   transparent,
+  map-get($colors, primary-5),
+  transparent,
+  map-get($colors, inverse),
   map-get($colors, primary-4),
   transparent,
   map-get($colors, primary-1),
-  map-get($colors, primary-5),
-  transparent,
-  map-get($colors, primary-2),
   map-get($colors, primary-6),
   transparent,
-  transparent,
-  map-get($colors, disabled),
+  map-get($colors, inverse),
+  map-get($colors, primary-2),
   transparent
 );

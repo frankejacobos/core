@@ -1,17 +1,60 @@
-<main>
-  <div class="flex gap-16 flex-wrap">
-    <button azui-button tipo="primary">hola mundo</button>
-    <button azui-button tipo="secondary">hola mundo</button>
-    <button azui-button tipo="neutral">hola mundo</button>
+<main class="p-40">
+  <div class="flex-column gap-8">
+    <div class="flex gap-8 flex-wrap">
+      <button azui-button tipo="primary">hola mundo</button>
+      <button azui-button tipo="secondary">hola mundo</button>
+      <button azui-button tipo="neutral">hola mundo</button>
 
-    <button azui-button [disabled]="true" tipo="primary">hola mundo</button>
-    <button azui-button [disabled]="true" tipo="secondary">hola mundo</button>
-    <button azui-button [disabled]="true" tipo="neutral">hola mundo</button>
+      <button azui-button [disabled]="true" tipo="primary">hola mundo</button>
+      <button azui-button [disabled]="true" tipo="secondary">hola mundo</button>
+      <button azui-button [disabled]="true" tipo="neutral">hola mundo</button>
+    </div>
 
-    <azui-alert
-      titulo="titulo de prueba"
-      descripcion="descripcion de prueba"
-      [tipoAlerta]="5"
-    ></azui-alert>
+    <div class="flex-column gap-8">
+      <azui-alert
+        titulo="titulo de prueba"
+        descripcion="descripcion de prueba"
+        [tipoAlerta]="TipoAlerta.Error"
+      ></azui-alert>
+
+      <azui-alert
+        titulo="titulo de prueba"
+        descripcion="descripcion de prueba"
+        [tipoAlerta]="TipoAlerta.Neutral"
+      ></azui-alert>
+
+      <azui-alert
+        titulo="titulo de prueba"
+        descripcion="descripcion de prueba"
+        [tipoAlerta]="TipoAlerta.Primary"
+      ></azui-alert>
+
+      <azui-alert
+        titulo="titulo de prueba"
+        descripcion="descripcion de prueba"
+        [tipoAlerta]="TipoAlerta.Success"
+      ></azui-alert>
+
+      <azui-alert
+        titulo="titulo de prueba"
+        descripcion="descripcion de prueba"
+        [tipoAlerta]="TipoAlerta.Warning"
+      ></azui-alert>
+    </div>
+
+    <div class="flex gap-8 flex-wrap">
+      <azui-checkbox label="opcion 1"></azui-checkbox>
+      <azui-checkbox label="opcion 2"></azui-checkbox>
+      <azui-checkbox label="opcion 3"></azui-checkbox>
+      <azui-checkbox label="opcion 4"></azui-checkbox>
+      <azui-checkbox></azui-checkbox>
+      <azui-checkbox></azui-checkbox>
+      <azui-checkbox></azui-checkbox>
+      <azui-checkbox></azui-checkbox>
+    </div>
+
+    <div class="flex gap-8">
+      <azui-copy texto="click para copiar"></azui-copy>
+    </div>
   </div>
 </main>
