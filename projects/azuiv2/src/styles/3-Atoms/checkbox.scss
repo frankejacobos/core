@@ -51,8 +51,7 @@
 
 .az-checkbox > span[azui-icons] {
   position: absolute;
-  margin-top: 1.5px;
-  margin-left: 2.4px;
+  padding-left: 6px;
   font-size: 11px;
   color: map-get($colors, inverse);
 }

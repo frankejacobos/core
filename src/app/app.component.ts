@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TipoRepuestaEnum } from 'azuiv2';
+import { NzUploadFile } from 'ng-zorro-antd/upload';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,9 @@ import { TipoRepuestaEnum } from 'azuiv2';
 })
 export class AppComponent {
   public readonly TipoAlerta = TipoRepuestaEnum;
+
+  public readonly afterUpload: (file: NzUploadFile) => boolean = (file) => {
+    console.log({ file });
+    return true;
+  };
 }

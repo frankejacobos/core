@@ -1,60 +1,116 @@
-<main class="p-40">
+<main class="p-40 flex-column gap-8">
+  <div class="flex gap-8 flex-wrap">
+    <button azui-button tipo="primary">hola mundo</button>
+    <button azui-button tipo="secondary">hola mundo</button>
+    <button azui-button tipo="neutral">hola mundo</button>
+
+    <azui-divider tipo="vertical"></azui-divider>
+
+    <button azui-button [disabled]="true" tipo="primary">hola mundo</button>
+    <button azui-button [disabled]="true" tipo="secondary">hola mundo</button>
+    <button azui-button [disabled]="true" tipo="neutral">hola mundo</button>
+  </div>
+
+  <azui-divider></azui-divider>
+
   <div class="flex-column gap-8">
-    <div class="flex gap-8 flex-wrap">
-      <button azui-button tipo="primary">hola mundo</button>
-      <button azui-button tipo="secondary">hola mundo</button>
-      <button azui-button tipo="neutral">hola mundo</button>
+    <azui-alert
+      titulo="Alerta de éxito"
+      descripcion="Descripción del éxito. Escribe aquí detalles del proceso exitoso."
+      [tipoAlerta]="TipoAlerta.Success"
+    ></azui-alert>
 
-      <button azui-button [disabled]="true" tipo="primary">hola mundo</button>
-      <button azui-button [disabled]="true" tipo="secondary">hola mundo</button>
-      <button azui-button [disabled]="true" tipo="neutral">hola mundo</button>
-    </div>
+    <azui-alert
+      titulo="Alerta de precaución"
+      descripcion="Descripción de la precaución. Escribe aquí detalles de la precaución."
+      [tipoAlerta]="TipoAlerta.Warning"
+    ></azui-alert>
 
-    <div class="flex-column gap-8">
-      <azui-alert
-        titulo="titulo de prueba"
-        descripcion="descripcion de prueba"
-        [tipoAlerta]="TipoAlerta.Error"
-      ></azui-alert>
+    <azui-alert
+      titulo="Alerta de error"
+      descripcion="Descripción de error. Escribe aquí detalles del error."
+      [tipoAlerta]="TipoAlerta.Error"
+    ></azui-alert>
 
-      <azui-alert
-        titulo="titulo de prueba"
-        descripcion="descripcion de prueba"
-        [tipoAlerta]="TipoAlerta.Neutral"
-      ></azui-alert>
+    <azui-alert
+      titulo="Alerta"
+      descripcion="Descripción neutral. Escribe aquí detalles del proceso."
+      [tipoAlerta]="TipoAlerta.Neutral"
+    ></azui-alert>
 
-      <azui-alert
-        titulo="titulo de prueba"
-        descripcion="descripcion de prueba"
-        [tipoAlerta]="TipoAlerta.Primary"
-      ></azui-alert>
+    <azui-alert
+      titulo="Alerta destacada"
+      descripcion="Descripción notoria. Escribe aquí detalles de lo que quieres destacar."
+      [tipoAlerta]="TipoAlerta.Primary"
+    ></azui-alert>
+  </div>
 
-      <azui-alert
-        titulo="titulo de prueba"
-        descripcion="descripcion de prueba"
-        [tipoAlerta]="TipoAlerta.Success"
-      ></azui-alert>
+  <azui-divider></azui-divider>
 
-      <azui-alert
-        titulo="titulo de prueba"
-        descripcion="descripcion de prueba"
-        [tipoAlerta]="TipoAlerta.Warning"
-      ></azui-alert>
-    </div>
+  <div class="flex gap-8 flex-wrap">
+    <azui-checkbox label="opcion 1"></azui-checkbox>
+    <azui-checkbox label="opcion 2"></azui-checkbox>
+    <azui-checkbox label="opcion 3"></azui-checkbox>
+    <azui-checkbox label="opcion 4"></azui-checkbox>
 
-    <div class="flex gap-8 flex-wrap">
-      <azui-checkbox label="opcion 1"></azui-checkbox>
-      <azui-checkbox label="opcion 2"></azui-checkbox>
-      <azui-checkbox label="opcion 3"></azui-checkbox>
-      <azui-checkbox label="opcion 4"></azui-checkbox>
-      <azui-checkbox></azui-checkbox>
-      <azui-checkbox></azui-checkbox>
-      <azui-checkbox></azui-checkbox>
-      <azui-checkbox></azui-checkbox>
-    </div>
+    <azui-divider tipo="vertical"></azui-divider>
 
-    <div class="flex gap-8">
-      <azui-copy texto="click para copiar"></azui-copy>
-    </div>
+    <azui-checkbox></azui-checkbox>
+    <azui-checkbox></azui-checkbox>
+    <azui-checkbox></azui-checkbox>
+    <azui-checkbox></azui-checkbox>
+    <azui-copy texto="click"></azui-copy>
+  </div>
+
+  <azui-divider></azui-divider>
+
+  <div class="flex-column gap-8">
+    <azui-error errorMessage="error message">
+      <azui-input-group
+        [prefixRef]="prefixbuscar"
+        label="¿Qué estás buscando?"
+        class="expanded"
+      >
+        <input
+          #valorABuscar
+          [autofocus]="true"
+          azui-input
+          maxlength="75"
+          type="text"
+        />
+      </azui-input-group>
+    </azui-error>
+
+    <azui-input-group
+      [prefixRef]="prefixbuscar"
+      label="¿Qué estás buscando?"
+      class="expanded"
+    >
+      <input
+        #valorABuscar
+        [autofocus]="true"
+        azui-input
+        maxlength="75"
+        type="text"
+      />
+    </azui-input-group>
+
+    <ng-template #prefixbuscar>
+      <span azui-icons name="lupa"></span>
+    </ng-template>
+
+    <azui-textarea-group label="Descripcion del grupo" [maxLength]="180">
+      <textarea
+        #azuitextarea
+        formControlName="descripcion"
+        rows="3"
+        class="text-uppercase"
+        maxlength="180"
+      ></textarea>
+    </azui-textarea-group>
+  </div>
+
+  <div class="flex">
+    <azui-file-upload [beforeUpload]="afterUpload"></azui-file-upload>
   </div>
 </main>

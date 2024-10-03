@@ -31,6 +31,7 @@
   >
     <ng-container *ngIf="titulo">
       <h5
+        class="text-semi-bold"
         [ngClass]="{ 
              'text-success-hard': tipoAlerta === TipoRepuestaType.Success,
              'text-warning-hard': tipoAlerta === TipoRepuestaType.Warning,
@@ -55,8 +56,12 @@
       </p>
     </ng-container>
 
-    <p [ngClass]="{ 'text-description': size === 'small' }" *ngIf="descripcion">
+    <span
+      class="text-regular"
+      [ngClass]="{ 'text-description': size === 'small' }"
+      *ngIf="descripcion"
+    >
       {{ descripcion }}
-    </p>
+    </span>
   </div>
 </section>

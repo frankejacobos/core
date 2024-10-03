@@ -7,6 +7,13 @@ import {
   AzuiAlertModule,
   AzuiCheckboxComponent,
   AzuiCopyComponent,
+  AzuiDividerComponent,
+  AzuiErrorComponent,
+  AzuiInputModule,
+  AzuiTextareaComponent,
+  AzuiIcons,
+  AzuiFileUploadAnimationDirective,
+  AzuiFileUploadModule,
 } from 'dist/azuiv2';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,6 +27,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AzuiAlertModule,
     AzuiCheckboxComponent,
     AzuiCopyComponent,
+    AzuiDividerComponent,
+    AzuiErrorComponent,
+    AzuiIcons,
+    AzuiInputModule,
+    AzuiTextareaComponent,
+    AzuiFileUploadModule,
     HttpClientModule,
   ],
   providers: [],

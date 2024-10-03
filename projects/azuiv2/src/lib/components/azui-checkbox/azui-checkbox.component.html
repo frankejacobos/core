@@ -13,12 +13,7 @@
     [disabled]="isDisabled"
     [checked]="estaSeleccionado"
   />
-  <span
-    azui-icons
-    name="check"
-    *ngIf="estaSeleccionado"
-    style="padding-left: 4px"
-  ></span>
+  <span azui-icons name="check" *ngIf="estaSeleccionado"></span>
   <label
     *ngIf="label"
     [ngClass]="{

@@ -5,10 +5,6 @@
   transition: all 0.3s ease;
   min-height: 40px;
   height: 48px;
-
-  @media (max-width: 982px) {
-    height: 52px;
-  }
 }
 
 .az-input {
