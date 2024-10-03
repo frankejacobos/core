@@ -12,8 +12,10 @@ import {
   AzuiInputModule,
   AzuiTextareaComponent,
   AzuiIcons,
-  AzuiFileUploadAnimationDirective,
   AzuiFileUploadModule,
+  AzuiInputNumberComponent,
+  AzuiMessageComponent,
+  AzuiModalComponent,
 } from 'dist/azuiv2';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,6 +35,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AzuiInputModule,
     AzuiTextareaComponent,
     AzuiFileUploadModule,
+    AzuiInputNumberComponent,
+    AzuiMessageComponent,
+    AzuiModalComponent,
     HttpClientModule,
   ],
   providers: [],

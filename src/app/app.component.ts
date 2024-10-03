@@ -14,4 +14,14 @@ export class AppComponent {
     console.log({ file });
     return true;
   };
+
+  isVisible: boolean = false;
+
+  showModal(): void {
+    this.isVisible = true;
+  }
+
+  closeModal(): void {
+    this.isVisible = false;
+  }
 }

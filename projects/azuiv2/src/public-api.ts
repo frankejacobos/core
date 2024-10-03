@@ -28,3 +28,9 @@ export * from './lib/components/azui-input/azui-input-group/azui-input-group.com
 export * from './lib/components/azui-input/azui-input.module';
 
 export * from './lib/components/azui-textarea/azui-textarea.component';
+
+export * from './lib/components/azui-input-number/azui-input-number.component';
+
+export * from './lib/components/azui-message/azui-message.component';
+
+export * from './lib/components/azui-modal/azui-modal.component';
