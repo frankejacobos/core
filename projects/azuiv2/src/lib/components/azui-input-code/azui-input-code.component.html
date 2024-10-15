@@ -1,0 +1,18 @@
+<div class="flex gap-8">
+    <azui-input-group *ngFor="let e of [].constructor(length); let i = index" 
+        [azStyle]="{height: height , width: width}"
+        [ngStyle]="{'margin-right': ((i+1)%divideEach === 0 && i !== length-1) ? '24px' : ''}"
+        [ngClass]="{'br-8 border-danger-hard o-hidden': !codigoValido}"
+        [hasError]="!codigoValido"
+    >
+        <input #inputText type="text" azui-input maxlength="1"
+        (keyup)="onWrite(i,inputText.value,$event)"
+        (keydown.backspace)="onBackSpace(i)"
+        validateRegexDirective
+        [regex]="patronValidacion"
+        [ngClass]="{'input-text-error': !codigoValido}"
+        class="text-center"
+        [disabled]="isDisabled"
+        />
+    </azui-input-group>
+</div>

@@ -1,0 +1,68 @@
+
+azui-input-group{
+    overflow: hidden;
+
+}
+input{
+    font-size: 34px;
+    font-weight: 500;
+    padding-left: 0;
+    padding-right: 0;
+    caret-color: transparent;
+}
+
+input:focus{
+    border-bottom: 3px solid var(--color-primary-5);
+}
+
+.input-error{
+    border: 3px solid var(--color-danger-soft);
+    border-radius: 16px;
+    animation: 0.4s shake ease-in-out;
+}
+.input-text-error{
+    color: var(--color-danger-hard);
+    pointer-events: none;
+}
+
+
+.type-text{
+    animation: 0.3s downText ease-in;
+}
+
+.type-text-slow{
+    animation: 0.5s downText ease-in;
+}
+
+@keyframes downText {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    75%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+  
+
