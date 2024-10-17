@@ -1,6 +1,6 @@
 {
   "name": "azuiv2",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "peerDependencies": {
     "ng-zorro-antd": "^16.2.2",
     "@angular/common": "^16.2.0",
