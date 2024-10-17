@@ -106,6 +106,7 @@
       </azui-input-group>
     </azui-error>
 
+    
     <azui-input-group
       [prefixRef]="prefixbuscar"
       label="¿Qué estás buscando?"
@@ -119,6 +120,28 @@
         type="text"
       />
     </azui-input-group>
+
+    <azui-input-code
+    patronValidacion="alfanumerico"
+    [length]="6"
+    [divideEach]="3"
+    [codigoValido]="false"
+    width="52px"
+    height="70px"
+    />
+
+    <azui-divider></azui-divider>
+
+
+    <azui-input-code
+    patronValidacion="alfanumerico"
+    [length]="6"
+    [divideEach]="3"
+    [codigoValido]="true"
+    width="52px"
+    height="70px"
+    />
+
 
     <ng-template #prefixbuscar>
       <span azui-icons name="lupa"></span>

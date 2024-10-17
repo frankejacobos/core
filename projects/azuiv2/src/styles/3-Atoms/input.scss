@@ -96,3 +96,11 @@ input[disabled] {
 input[disabled]::placeholder {
   color: map-get($colors, primary-2);
 }
+
+.az-input-group__error--disabled {
+  border: none;
+  border-radius: 8px;
+}
+.az-input-group__error--disabled > span:first-child {
+  color: map-get($colors, primary-2);
+}

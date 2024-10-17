@@ -34,3 +34,6 @@ export * from './lib/components/azui-input-number/azui-input-number.component';
 export * from './lib/components/azui-message/azui-message.component';
 
 export * from './lib/components/azui-modal/azui-modal.component';
+
+
+export * from './lib/components/azui-input-code/azui-input-code.component';

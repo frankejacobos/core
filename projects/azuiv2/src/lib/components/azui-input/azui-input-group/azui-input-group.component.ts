@@ -39,6 +39,7 @@ export class AzuiInputGroupComponent implements OnInit, OnDestroy {
   hasFocus = false;
   observer?: MutationObserver;
 
+  @Input()
   hasError = false;
 
   focusEvent = () => {

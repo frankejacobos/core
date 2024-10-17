@@ -16,9 +16,11 @@ import {
   AzuiInputNumberComponent,
   AzuiMessageComponent,
   AzuiModalComponent,
+  AzuiInputCodeComponent,
 } from 'dist/azuiv2';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AzuiDividerComponent,
     AzuiErrorComponent,
     AzuiIcons,
+    AzuiInputCodeComponent,
     AzuiInputModule,
     AzuiTextareaComponent,
     AzuiFileUploadModule,
